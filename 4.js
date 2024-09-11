@@ -1,27 +1,35 @@
-'hello'.charAt(1); // 'e'
+// To check if a property on a given object exists or not, you can use
+// the.hasOwnProperty() method.someObject.hasOwnProperty(someProperty)
+// returns true or false depending on if the property is found on the
+// object or not.
+function checkForProperty(object, property) {
+  return object.hasOwnProperty(property);
+}
 
-'hello world'.includes('world'); // true
+console.log(checkForProperty({ top: "hat", bottom: "pants" }, "top"));
+console.log(checkForProperty({ top: "hat", bottom: "pants" }, "middle"));
 
-'hello'.toUpperCase(); // 'HELLO'
-'HELLO'.toLowerCase(); // 'hello'
+function checkObj(obj, checkProp) {
+  console.log(obj);
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  }
+  return "Not Found";
+}
+console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift"));
 
-'hello world'.slice(0, 5); // 'hello'
+// for Array, we can use includes
+const arr = [1, 3, 5];
+console.log(arr.includes(2)); //false
 
-'hello world'.replace('world', 'everyone'); // 'hello everyone'
+// The has() method is not available for arrays, but it is available
+// for other JavaScript data structures, such as Map and Set.
+const set = new Set([1, 3, 5]);
+console.log(set.has(2)); // false
+console.log(set.has(3)); // true
 
-let str = 'hello world';
-console.log(str.indexOf('world'));
-console.log(str.substring(1, 4)); // "ell" Similar to slice, but does not accept negative indices.
-console.log(str.split(' ')); // ["hello", "world"]
-
-let str1 = '  hello world  ';
-console.log(str1.trim()); // "hello world"
-let str0 = 'hello';
-let str2 = 'world';
-console.log(str0.concat(' ', str2)); // "hello world"
-let str3 = 'hello';
-console.log(str3.repeat(3)); // "hellohellohello"
-let str4 = 'hello world';
-console.log(str4.startsWith('hello')); // true
-let str5 = 'hello world';
-console.log(str5.endsWith('world')); // true
+const map = new Map();
+map.set("a", 1);
+map.set("b", 2);
+console.log(map.has("a")); // true
+console.log(map.has("c")); // false

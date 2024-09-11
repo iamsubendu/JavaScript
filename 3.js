@@ -1,57 +1,35 @@
-const menuData = [
-  {
-    name: 'Menu 1',
-    link: 'http://google.com',
-    subitems: [
-      {
-        name: 'Menu 2',
-        link: 'http://google.com',
-      },
-    ],
-  },
-  {
-    name: 'Menu 3',
-    link: 'http://google.com',
-    subitems: [
-      {
-        name: 'Menu 4',
-        link: 'http://google.com',
-        subitems: [
-          {
-            name: 'Menu 5',
-            link: 'http://google.com',
-          },
-          {
-            name: 'Menu 6',
-            link: 'http://google.com',
-          },
-        ],
-      },
-    ],
-  },
-];
+// Objects are similar to arrays, except that instead of using
+// indexes to access and modify their data, you access the data
+// in objects through what are called properties.
 
-// approach to store every name value
+// Objects are useful for storing data in a structured way
 
-// we can use a recursive function to traverse
-// through each item and its subitems(if any),
-// collecting the name values into an array.
+// const cat = {
+//   name: "Whiskers",
+//   legs: 4,
+//   tails: 1,
+//   enemies: ["Water", "Dogs"],
+// };
+const myDog = {
+  name: "Pluto",
+  legs: 4,
+  tails: 1,
+  friends: ["S", "B", "K"],
+};
+console.log(myDog);
 
-function collectNames(menuItems) {
-  let names = [];
-  console.log(names, '42');
-  menuItems.forEach((item) => {
-    names.push(item.name);
+// There are two ways to access the properties of an object: dot
+// notation(.) and bracket notation([]), similar to an array.
+console.log(myDog.friends);
+console.log(myDog["legs"]);
 
-    if (item.subitems && item.subitems.length > 0) {
-      // Recursively collect names from subitems
-      console.log(names, '48');
-      names = names.concat(collectNames(item.subitems));
-    }
-  });
+myDog.name = "Alakazam";
+console.log(myDog["name"]);
 
-  return names;
-}
+console.log(myDog);
+myDog["bark"] = "woof";
+console.log(myDog);
 
-const allNames = collectNames(menuData);
-console.log(allNames);
+// We can also delete properties from objects
+delete myDog.bark;
+console.log(myDog);

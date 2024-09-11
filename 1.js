@@ -6,13 +6,13 @@ console.log(firstLetter);
 
 const myArray = [
   ["John", 23],
-  ["cat", 2],
+  ["Cat", 2],
 ];
 console.log(myArray);
-let newArray = myArray.push(["Dog", 4]);
-console.log(newArray);
-newArray.pop();
-console.log(newArray);
+myArray.push(["Dog", 4]);
+console.log(myArray);
+myArray.pop();
+console.log(myArray);
 
 // pop() always removes the last element of an array.
 // What if you want to remove the first ?

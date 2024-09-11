@@ -1,28 +1,33 @@
-console.log(typeof 3, typeof "3");
+// 42: number
 
-// Counting Cards
-// In the casino game Blackjack, a player can determine whether they have an advantage
-// on the next hand over the house by keeping track of the relative number of high and
-// low cards remaining in the deck.This is called Card Counting.
+// 'hello': string
 
-// Having more high cards remaining in the deck favors the player. Each card is assigned
-// a value according to the table below.When the count is positive, the player should
-// bet high.When the count is zero or negative, the player should bet low.
+// true: boolean
 
-// Count Change	Cards
-// +1	2, 3, 4, 5, 6
-// 0	7, 8, 9
-// -1	10, 'J', 'Q', 'K', 'A'
-// You will write a card counting function. It will receive a card parameter,
-// which can be a number or a string, and increment or decrement the global count
-// variable according to the card's value (see table). The function will then return
-// a string with the current count and the string Bet if the count is positive, or
-// Hold if the count is zero or negative.The current count and the player's
-// decision(Bet or Hold) should be separated by a single space.
+// undefined: undefined
 
-// Example Outputs: -3 Hold or 5 Bet
+// Symbol('id'): symbol
 
-// Hint
-// Do NOT reset count to 0 when value is 7, 8, or 9.
-// Do NOT return an array.
-// Do NOT include quotes (single or double) in the output.
+// BigInt(9007199254740991): bigint
+
+// null: object
+
+// { }: object
+
+// []: object
+
+// function() {}: function
+
+// NaN: number
+// JavaScript treats NaN as a special kind of number that
+// represents an undefined or un-representable value within
+// the set of all possible numbers.
+
+console.log(typeof 3, typeof "3", typeof true, typeof undefined);
+console.log(typeof Symbol("id"));
+console.log(typeof BigInt(9007199254740991));
+console.log(typeof null);
+console.log(typeof {});
+console.log(typeof []);
+console.log(typeof function () {});
+console.log(typeof NaN);
