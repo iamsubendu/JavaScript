@@ -33,4 +33,5 @@ createOrder(cart)
     return updateWallet();
   });
 // this is known as promise chaning
+// helps from get rid of Callback hell
 // return is must so to pass data in the chain
