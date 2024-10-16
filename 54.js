@@ -55,10 +55,12 @@ printFullName4.apply(name3, ["BSP", "CG"]);
 // provided value, with a given sequence of arguments preceding any provided
 // when the new function is called.
 let printMyName = printFullName4.bind(name3, "BSP", "CG");
-console.log(printMyName);
+console.log(printMyName(), "58");
 // will create a copy of printFullName4 fn
 // and will bind it with name3 object
 // and will return a function
 // which can be called later
 printMyName();
 // passing arguments is same as call
+let printMyName2 = printFullName4.bind(name3, "BSP");
+printMyName2("Bihar");

@@ -48,7 +48,6 @@ let printFullName2 = function (city, state) {
 };
 
 Function.prototype.myBind = function (...args) {
-  console.log(this);
   let obj = this,
     params = args.slice(1);
   return function () {
